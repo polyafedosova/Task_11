@@ -31,7 +31,7 @@ public class Abbreviations
         boolean result = true;
         for (char x : word)
         {
-            if (word.length < 2 || Character.isLowerCase(x) || Character.isDigit(x))
+            if (word.length < 2 || word.length > 6  || Character.isLowerCase(x) || Character.isDigit(x))
             {
                 result = false;
                 break;

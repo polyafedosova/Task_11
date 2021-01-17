@@ -6,13 +6,16 @@ import java.util.Scanner;
 
 public class FileReader
 {
-    public static String[] readFile(String filename)
+    public static String[] readFile()
     {
         String text = "";
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the full path to the file that contains the text");
+        String filename = scanner.nextLine();
         File inputFile = new File(filename);
         try
         {
-            Scanner scanner = new Scanner(inputFile);
+            scanner = new Scanner(inputFile);
             text = scanner.nextLine();
         } catch (FileNotFoundException fileNotFoundException)
         {
